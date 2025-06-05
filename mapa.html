@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthSupport - Mapa de Eventos Climáticos</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/mapa.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header class="cabecalho">
+    <div class="conteiner">
+      <div class="logo">
+        <img src="img/logo-challenge.png" id="logo-header" alt="logo Health Support">
+        <a href="index.html"><span>HealthSupport</span></a>
+      </div>
+
+      <!-- Navegação desktop -->
+      <nav class="navegacao-desktop">
+        <a href="index.html#solucoes">Soluções</a>
+        <a href="index.html#como-funciona">Como Funciona</a>
+        <a href="index.html#depoimentos">Depoimentos</a>
+        <a href="contato.html">Contato</a>
+        <a href="dashbord.html" class="botao botao-primario">Entrar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mapa-container">
+    <div class="conteiner">
+      <div class="mapa-titulo">
+        <h1>Mapa de Eventos Climáticos</h1>
+        <p>Registre e visualize ocorrências climáticas em todo o Brasil</p>
+      </div>
+
+      <div class="mapa-content">
+        <div class="mapa-sidebar">
+          <div class="search-container">
+            <h3>Localizar Endereço</h3>
+            <div class="input-group">
+              <input id="endereco-input" type="text" placeholder="Digite um endereço..." />
+              <button id="location-button" class="botao botao-primario">
+                <span>Minha Localização</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="legend-container">
+            <h3>Legenda</h3>
+            <ul class="legend-list">
+              <li>
+                <span class="legend-marker tempestade"></span>
+                <span>Tempestade</span>
+              </li>
+              <li>
+                <span class="legend-marker enchente"></span>
+                <span>Enchente</span>
+              </li>
+              <li>
+                <span class="legend-marker incendio"></span>
+                <span>Incêndio</span>
+              </li>
+              <li>
+                <span class="legend-marker terremoto"></span>
+                <span>Terremoto</span>
+              </li>
+              <li>
+                <span class="legend-marker seca"></span>
+                <span>Seca</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="instructions">
+            <h3>Como Usar</h3>
+            <ol>
+              <li>Clique em qualquer ponto do mapa para registrar um evento</li>
+              <li>Preencha as informações solicitadas</li>
+              <li>Clique em "Adicionar" para salvar o evento</li>
+            </ol>
+          </div>
+
+          <a href="dashbord.html" class="dashboard-link">
+            <div class="dashboard-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </div>
+            <span>Visualizar Dashboard de Eventos</span>
+          </a>
+        </div>
+
+        <div class="mapa-wrapper">
+          <div id="mapa"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer id="contato" class="rodape">
+    <div class="conteiner">
+      <div class="rodape-inferior">
+        <p>&copy; 2025 HealthSupport. Todos os direitos reservados.</p>
+        <div class="legal-rodape">
+          <a href="#">Política de Privacidade</a>
+          <a href="#">Termos de Serviço</a>
+          <a href="#">LGPD</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/mapa.js"></script>
+  <!-- Carregamento da API com Places e Maps -->
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpRX9Nv6Scrqsv9Jrrzz1F6dcmVblNPoY&libraries=places&callback=initMap">
+  </script>
+</body>
+
+</html>

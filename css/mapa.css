@@ -1,0 +1,255 @@
+/* Estilos para a página do mapa */
+.mapa-container {
+  padding: 40px 0;
+  background-color: #f9fafb;
+  min-height: calc(100vh - 70px - 100px); /* Altura da viewport menos cabeçalho e rodapé */
+}
+
+.mapa-titulo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.mapa-titulo h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.mapa-titulo p {
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+.mapa-content {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.mapa-sidebar {
+  width: 350px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.mapa-wrapper {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#mapa {
+  height: 600px;
+  width: 100%;
+}
+
+.search-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.search-container h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#endereco-input {
+  padding: 12px 15px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+#endereco-input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1);
+}
+
+#location-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+}
+
+.legend-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.legend-container h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.legend-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.legend-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.legend-marker {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.legend-marker.tempestade {
+  background-color: #3b82f6;
+}
+
+.legend-marker.enchente {
+  background-color: #0ea5e9;
+}
+
+.legend-marker.incendio {
+  background-color: #ef4444;
+}
+
+.legend-marker.terremoto {
+  background-color: #8b5cf6;
+}
+
+.legend-marker.seca {
+  background-color: #f59e0b;
+}
+
+.instructions {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.instructions h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.instructions ol {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.instructions li {
+  margin-bottom: 10px;
+  color: #4b5563;
+}
+
+.dashboard-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #4f46e5;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(79, 70, 229, 0.25);
+}
+
+.dashboard-link:hover {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(79, 70, 229, 0.3);
+}
+
+.dashboard-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para o popup do Google Maps */
+.gm-style .gm-style-iw-c {
+  padding: 20px !important;
+  border-radius: 8px !important;
+}
+
+.gm-style .gm-style-iw-d {
+  overflow: hidden !important;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .mapa-content {
+    flex-direction: column;
+  }
+
+  .mapa-sidebar {
+    width: 100%;
+    order: 2;
+  }
+
+  .mapa-wrapper {
+    order: 1;
+  }
+
+  #mapa {
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mapa-titulo h1 {
+    font-size: 2rem;
+  }
+
+  .mapa-titulo p {
+    font-size: 1rem;
+  }
+
+  #mapa {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mapa-titulo h1 {
+    font-size: 1.75rem;
+  }
+
+  .mapa-container {
+    padding: 20px 0;
+  }
+
+  .search-container,
+  .legend-container,
+  .instructions {
+    padding: 15px;
+  }
+}

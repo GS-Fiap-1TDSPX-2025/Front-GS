@@ -1,0 +1,253 @@
+/* Estilos específicos para a página de Contato */
+
+.secao-contato {
+  padding: 80px 0;
+  background-color: #f9fafb;
+}
+
+.titulo-secao {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+.subtitulo-secao {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #5e5e5e;
+  letter-spacing: 2px;
+}
+
+.separador {
+  width: 60px;
+  height: 4px;
+  background-color: #4f46e5;
+  margin: 0 auto 60px;
+}
+
+.formulario-contato {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+}
+
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+legend {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  padding: 0;
+  display: block;
+  width: 100%;
+}
+
+
+.selecao-opcao {
+  margin-bottom: 30px;
+}
+
+.select-container {
+  position: relative;
+}
+
+select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  background-color: transparent;
+  appearance: none;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #4f46e5;
+  pointer-events: none;
+  font-size: 0.8rem;
+}
+
+.formulario-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.campo-formulario {
+  margin-bottom: 20px;
+}
+
+.campo-formulario label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.campo-obrigatorio {
+  color: #4f46e5;
+  margin-left: 2px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  background-color: transparent;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.campo-formulario-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.campo-pequeno {
+  flex: 1;
+}
+
+.campo-medio {
+  flex: 2;
+}
+
+.campo-grande {
+  flex: 3;
+}
+
+.campo-checkbox {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.campo-checkbox input {
+  width: auto;
+  margin-right: 10px;
+  margin-top: 3px;
+}
+
+.campo-checkbox label {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #6b7280;
+}
+
+.link-termos {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+.botoes-formulario {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.botao-secundario {
+  background-color: transparent;
+  color: #4f46e5;
+  border: 2px solid #4f46e5;
+}
+
+.botao-secundario:hover {
+  background-color: rgba(79, 70, 229, 0.05);
+}
+
+.erro-mensagem {
+  color: #e11d48;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  min-height: 20px;
+}
+
+/* Estilo para campos com erro */
+.campo-erro input,
+.campo-erro textarea,
+.campo-erro select {
+  border-color: #e11d48;
+  background-color: rgba(225, 29, 72, 0.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .formulario-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .formulario-contato {
+    padding: 30px 20px;
+  }
+
+  .titulo-secao {
+    font-size: 2rem;
+  }
+
+  .botoes-formulario {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .botao {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .secao-contato {
+    padding: 60px 0;
+  }
+
+  .campo-formulario-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .titulo-secao {
+    font-size: 1.75rem;
+  }
+}

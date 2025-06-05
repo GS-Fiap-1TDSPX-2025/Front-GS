@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthSupport - Contato</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contato.css">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+        <div class="conteiner">
+            <div class="logo">
+                <img src="img/logo-challenge.png" id="logo-header">
+                <a href="index.html"><span>HealthSupport</span></a>
+            </div>
+
+            <!-- Botão do menu mobile -->
+            <button class="botao-menu-mobile">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Navegação desktop -->
+            <nav class="navegacao-desktop">
+                <a href="index.html#solucoes">Soluções</a>
+                <a href="index.html#como-funciona">Como Funciona</a>
+                <a href="index.html#depoimentos">Depoimentos</a>
+
+                <a href="contato.html">Contato</a>
+                <a href="dashbord.html" class="botao botao-primario">Entrar</a>
+                <a href="#comecar" class="botao botao-primario">Cadastre-se</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção de Contato -->
+        <section class="secao-contato">
+            <div class="conteiner">
+                <h1 class="titulo-secao">Precisa de ajuda?</h1>
+                <h3 class="subtitulo-secao">Só nos chamar!</h3>
+                <div class="separador"></div>
+
+                <form id="formulario-contato" class="formulario-contato" novalidate>
+                    <fieldset>
+                        <legend>SELECIONE UMA OPÇÃO</legend>
+                        <div class="selecao-opcao">
+                            <div class="select-container">
+                                <select id="assunto" name="assunto" required>
+                                    <option value="" disabled selected>Selecione um assunto</option>
+                                    <option value="suporte">Suporte Técnico</option>
+                                    <option value="comercial">Informações Comerciais</option>
+                                    <option value="parceria">Proposta de Parceria</option>
+                                    <option value="outro">Outro Assunto</option>
+                                </select>
+                                <div class="select-arrow">▼</div>
+                            </div>
+                            <div class="erro-mensagem" id="erro-assunto"></div>
+                        </div>
+                    </fieldset>
+
+                    <div class="formulario-grid">
+                        <fieldset class="coluna-esquerda">
+                            <legend>INFORMAÇÕES PESSOAIS</legend>
+
+                            <div class="campo-formulario">
+                                <label for="nome">NOME<span class="campo-obrigatorio">*</span></label>
+                                <input type="text" id="nome" name="nome" required>
+                                <div class="erro-mensagem" id="erro-nome"></div>
+                            </div>
+
+                            <div class="campo-formulario">
+                                <label for="email">E-MAIL<span class="campo-obrigatorio">*</span></label>
+                                <input type="email" id="email" name="email" required>
+                                <div class="erro-mensagem" id="erro-email"></div>
+                            </div>
+
+                            <div class="campo-formulario">
+                                <label for="confirma-email">CONFIRMAÇÃO DO E-MAIL<span
+                                        class="campo-obrigatorio">*</span></label>
+                                <input type="email" id="confirma-email" name="confirma-email" required>
+                                <div class="erro-mensagem" id="erro-confirma-email"></div>
+                            </div>
+
+                            <div class="campo-formulario-row">
+                                <div class="campo-formulario campo-pequeno">
+                                    <label for="ddd">DDD<span class="campo-obrigatorio">*</span></label>
+                                    <input type="text" id="ddd" name="ddd" maxlength="2" required>
+                                    <div class="erro-mensagem" id="erro-ddd"></div>
+                                </div>
+
+                                <div class="campo-formulario campo-medio">
+                                    <label for="telefone">TELEFONE<span class="campo-obrigatorio">*</span></label>
+                                    <input type="text" id="telefone" name="telefone" maxlength="9" required>
+                                    <div class="erro-mensagem" id="erro-telefone"></div>
+                                </div>
+                            </div>
+
+                            <div class="campo-formulario-row">
+                                <div class="campo-formulario campo-grande">
+                                    <label for="cidade">CIDADE<span class="campo-obrigatorio">*</span></label>
+                                    <div class="select-container">
+                                        <select id="cidade" name="cidade" required>
+                                            <option value="" disabled selected>Selecione uma cidade</option>
+                                            <option value="sao-paulo">São Paulo</option>
+                                            <option value="rio-de-janeiro">Rio de Janeiro</option>
+                                            <option value="belo-horizonte">Belo Horizonte</option>
+                                            <option value="brasilia">Brasília</option>
+                                            <option value="salvador">Salvador</option>
+                                            <option value="fortaleza">Fortaleza</option>
+                                            <option value="recife">Recife</option>
+                                            <option value="porto-alegre">Porto Alegre</option>
+                                            <option value="curitiba">Curitiba</option>
+                                            <option value="manaus">Manaus</option>
+                                            <option value="outra">Outra cidade</option>
+                                        </select>
+                                        <div class="select-arrow">▼</div>
+                                    </div>
+                                    <div class="erro-mensagem" id="erro-cidade"></div>
+                                </div>
+
+                                <div class="campo-formulario campo-pequeno">
+                                    <label for="estado">ESTADO<span class="campo-obrigatorio">*</span></label>
+                                    <div class="select-container">
+                                        <select id="estado" name="estado" required>
+                                            <option value="" disabled selected>UF</option>
+                                            <option value="AC">AC</option>
+                                            <option value="AL">AL</option>
+                                            <option value="AP">AP</option>
+                                            <option value="AM">AM</option>
+                                            <option value="BA">BA</option>
+                                            <option value="CE">CE</option>
+                                            <option value="DF">DF</option>
+                                            <option value="ES">ES</option>
+                                            <option value="GO">GO</option>
+                                            <option value="MA">MA</option>
+                                            <option value="MT">MT</option>
+                                            <option value="MS">MS</option>
+                                            <option value="MG">MG</option>
+                                            <option value="PA">PA</option>
+                                            <option value="PB">PB</option>
+                                            <option value="PR">PR</option>
+                                            <option value="PE">PE</option>
+                                            <option value="PI">PI</option>
+                                            <option value="RJ">RJ</option>
+                                            <option value="RN">RN</option>
+                                            <option value="RS">RS</option>
+                                            <option value="RO">RO</option>
+                                            <option value="RR">RR</option>
+                                            <option value="SC">SC</option>
+                                            <option value="SP">SP</option>
+                                            <option value="SE">SE</option>
+                                            <option value="TO">TO</option>
+                                        </select>
+                                        <div class="select-arrow">▼</div>
+                                    </div>
+                                    <div class="erro-mensagem" id="erro-estado"></div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="coluna-direita">
+                            <legend>MENSAGEM</legend>
+
+                            <div class="campo-formulario">
+                                <label for="titulo">TÍTULO DA MENSAGEM<span class="campo-obrigatorio">*</span></label>
+                                <input type="text" id="titulo" name="titulo" required>
+                                <div class="erro-mensagem" id="erro-titulo"></div>
+                            </div>
+
+                            <div class="campo-formulario">
+                                <label for="mensagem">MENSAGEM<span class="campo-obrigatorio">*</span></label>
+                                <textarea id="mensagem" name="mensagem" rows="10" required></textarea>
+                                <div class="erro-mensagem" id="erro-mensagem"></div>
+                            </div>
+
+                            <div class="campo-checkbox">
+                                <input type="checkbox" id="termos" name="termos" required>
+                                <label for="termos">
+                                    Eu li e concordo com os termos da <a href="#" class="link-termos">política de
+                                        privacidade</a>.
+                                </label>
+                                <div class="erro-mensagem" id="erro-termos"></div>
+                            </div>
+
+                            <div class="botoes-formulario">
+                                <button type="reset" id="botao-limpar" class="botao botao-secundario">LIMPAR</button>
+                                <button type="submit" id="botao-enviar" class="botao botao-primario">ENVIAR</button>
+                            </div>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="contato" class="rodape">
+        <div class="conteiner">
+            <div class="grade-rodape">
+                <div class="sobre-rodape">
+                    <div class="logo">
+                        <i class="fa-solid fa-stethoscope"></i>
+                        <span>HealthSupport</span>
+                    </div>
+                    <p>Soluções inteligentes para profissionais de saúde atenderem melhor seus pacientes.</p>
+                    <div class="links-sociais">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="links-rodape">
+                    <h3>Produto</h3>
+                    <ul>
+                        <li><a href="dashbord.html">Gerenciador de Tickets</a></li>
+                       
+                        <li><a href="#precos">Preços</a></li>
+                    </ul>
+                </div>
+
+                <div class="links-rodape">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="integrantes.html">Integrantes</a></li>
+                    </ul>
+                </div>
+
+                <div class="links-rodape">
+                    <h3>Suporte</h3>
+                    <ul>
+                        <li><a href="faq.html">Central de Ajuda</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="rodape-inferior">
+                <p>&copy; 2025 HealthSupport. Todos os direitos reservados.</p>
+                <div class="legal-rodape">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Serviço</a>
+                    <a href="#">LGPD</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/contato.js"></script>
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "e57a72ce-b438-4d7e-9472-7c7fca891ba5", // The ID of this integration.
+            region: "au-syd", // The region your integration is hosted in.
+            serviceInstanceID: "7ee18392-1afe-44ee-b5e3-c8f8241674e1", // The ID of your service instance.
+            onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function () {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+        });
+    </script>
+</body>
+
+</html>

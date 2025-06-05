@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Tickets</title>
+    <link rel="stylesheet" href="css/dashbord.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Menu Lateral Esquerdo -->
+        <aside class="menu-lateral">
+            <div class="logo">
+                <h1>Health Support</h1>
+            </div>
+
+            <!-- Perfil do Usuário -->
+            <div class="perfil-usuario-sidebar">
+                <div class="avatar-container">
+                    <span class="avatar-icon"><img src="img/profile-user.png"
+                            alt="icone representando uma imagem de uma pessoa"></span>
+                </div>
+                <div class="info-usuario">
+                    <h3 class="nome-usuario">Carlos Silva</h3>
+                    <p class="email-usuario">carlos.silva@empresa.com</p>
+                </div>
+            </div>
+
+            <nav class="menu-navegacao">
+                <ul>
+                    <!--
+                   <li class="menu-item ativo">
+                        <span class="icone dashboard-icon">⊞</span>
+                        <span>Dashboard</span>
+                    </li>
+                    -->
+
+                    <li class="menu-item">
+                        <span class="icone users-icon"><img src="img/group.png"
+                                alt="imagem de um grupo de icones de pessoas"> </span>
+                        <span>Usuários</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="icone tickets-icon"><img src="img/ticket.png"
+                                alt="imagem de tickets superexpostos"></span>
+                        <span>Tickets</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="icone settings-icon"><img src="img/settings.png"
+                                alt="icone de uma engrenagem"></span>
+                        <span>Configurações</span>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Botão de Sair -->
+            <a href="index.html" class="botao-sair-container">
+                <button class="botao-sair" a>
+                    <span class="icone-sair">↩</span>
+                    <span>Sair</span>
+                </button>
+            </a>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <section class="conteudo-principal">
+            <!-- Cabeçalho -->
+            <header class="cabecalho">
+                <div class="titulo-container">
+                    <h1>Ticket</h1>
+                    <button class="botao-novo">Novo Ticket</button>
+                </div>
+
+                <!-- Filtros -->
+                <div class="filtros">
+                    <div class="filtro">
+                        <select id="data-criacao">
+                            <option value="">Data de criação</option>
+                            <option value="hoje">Hoje</option>
+                            <option value="semana">Esta Semana</option>
+                            <option value="mes">Este Mês</option>
+                        </select>
+                    </div>
+
+                    <div class="filtro">
+                        <select id="tipo-problema">
+                            <option value="">Tipo do problema</option>
+                            <option value="login">Login</option>
+                            <option value="pagamento">Pagamento</option>
+                            <option value="deposito">Depósito</option>
+                        </select>
+                    </div>
+
+                    <div class="filtro busca">
+                        <input type="text" placeholder="Buscar ticket...">
+                    </div>
+                </div>
+
+                <!-- Status Tabs -->
+                <div class="status-tabs">
+                    <button class="tab ativo" data-categoria="todos">
+                        <span class="indicador todos"></span>
+                        Todos os tickets
+                    </button>
+                    <button class="tab" data-categoria="Tempestade">
+                        <span class="indicador chuva"></span>
+                        Tempestade
+                    </button>
+                    <button class="tab" data-categoria="Enchente">
+                        <span class="indicador temperatura"></span>
+                        Enchente
+                    </button>
+                    <button class="tab" data-categoria="seca">
+                        <span class="indicador seca"></span>
+                        Seca
+                    </button>
+                </div>
+
+            </header>
+
+            <!-- Lista de Tickets -->
+            <main class="lista-tickets">
+
+
+            </main>
+        </section>
+
+     
+        <aside class="painel-detalhes" id="painel-detalhes">
+            <div class="painel-cabecalho">
+                <h2>Detalhes do Ticket</h2>
+                <button class="botao-fechar" id="fechar-painel">&times;</button>
+            </div>
+
+            <div class="painel-conteudo">
+                <div class="ticket-info-detalhada">
+                    <h3 id="detalhe-titulo">Título do Ticket</h3>
+                    <div class="ticket-meta">
+                        <span id="detalhe-id">1</span>
+                        <span id="detalhe-data">Criado em: 15/05/2023</span>
+                    </div>
+                    <div class="ticket-status">
+                        <span class="indicador" id="detalhe-indicador"></span>
+                        <span id="detalhe-status">Em andamento</span>
+                    </div>
+                    <p id="detalhe-descricao">Descrição do ticket...</p>
+                </div>
+
+                <div class="acoes-ticket">
+                    <h4>Ações</h4>
+                    <div class="botoes-acao">
+                        <button class="acao-btn responder">Responder</button>
+                        <button class="acao-btn anotar">Adicionar Anotação</button>
+                        <button class="acao-btn encaminhar">Encaminhar</button>
+                    </div>
+                </div>
+
+                <div class="propriedades-ticket">
+                    <h4>Propriedades do Ticket</h4>
+                    <div class="propriedade">
+                        <label for="status-ticket">Status</label>
+                        <select id="status-ticket">
+                            <option value="em-analise">Em Análise</option>
+                            <option value="em-atendimento">Em Atendimento</option>
+                            <option value="resolvido">Resolvido</option>
+                        </select>
+                    </div>
+                    <div class="propriedade">
+                        <label for="agente-responsavel">Agente Responsável</label>
+                        <select id="agente-responsavel">
+                            <option value="">Selecione um agente</option>
+                            <option value="carlos-silva">Carlos Silva</option>
+                            <option value="ana-santos">Ana Santos</option>
+                            <option value="pedro-oliveira">Pedro Oliveira</option>
+                            <option value="maria-costa">Maria Costa</option>
+                        </select>
+                    </div>
+                    <div class="botoes-propriedades">
+                        <button class="botao-atualizar">Atualizar</button>
+                        <button class="botao-excluir">
+                           <img src="" alt="">
+                            Excluir Ticket
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Outras áreas como Resposta, Anotação, Encaminhar -->
+                <div class="area-resposta-painel" style="display: none;">
+                    <h4>Responder ao Ticket</h4>
+                    <textarea placeholder="Digite sua resposta aqui..."></textarea>
+                    <div class="botoes-resposta">
+                        <button class="botao-enviar-painel">Enviar</button>
+                        <button class="botao-cancelar-painel">Cancelar</button>
+                    </div>
+                </div>
+
+                <div class="area-anotacao" style="display: none;">
+                    <h4>Adicionar Anotação Interna</h4>
+                    <textarea placeholder="Digite sua anotação aqui..."></textarea>
+                    <div class="botoes-resposta">
+                        <button class="botao-salvar-anotacao">Salvar</button>
+                        <button class="botao-cancelar-anotacao">Cancelar</button>
+                    </div>
+                </div>
+
+                <div class="area-encaminhar" style="display: none;">
+                    <h4>Encaminhar Ticket</h4>
+                    <div class="propriedade">
+                        <label>Encaminhar para</label>
+                        <select id="encaminhar-para">
+                            <option value="">Selecione um departamento</option>
+                            <option value="suporte">Suporte Técnico</option>
+                            <option value="financeiro">Financeiro</option>
+                            <option value="vendas">Vendas</option>
+                        </select>
+                    </div>
+                    <textarea placeholder="Adicione uma mensagem (opcional)..."></textarea>
+                    <div class="botoes-resposta">
+                        <button class="botao-encaminhar">Encaminhar</button>
+                        <button class="botao-cancelar-encaminhar">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+
+        <!-- Modal de Confirmação de Exclusão -->
+        <div class="modal-overlay" id="modal-excluir">
+            <div class="modal">
+                <div class="modal-cabecalho">
+                    <h3>Confirmar Exclusão</h3>
+                    <button class="botao-fechar-modal">&times;</button>
+                </div>
+                <div class="modal-conteudo">
+                    <p>Tem certeza que deseja excluir este ticket?</p>
+                    <p class="aviso">Esta ação não pode ser desfeita.</p>
+                </div>
+                <div class="modal-acoes">
+                    <button class="botao-cancelar-modal">Cancelar</button>
+                    <button class="botao-confirmar-excluir">Sim, Excluir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+
+    <script src="js/dashborad.js"></script>
+</body>
+
+</html>
