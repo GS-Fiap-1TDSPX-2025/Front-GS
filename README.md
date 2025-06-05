@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Central Inteligente de Suporte – Projeto de Teleconsulta
 
 ## 📌 Objetivo do Projeto
@@ -69,3 +70,6 @@ integrantes.html
 ## 🔗 Repositório no GitHub
 
 [https://github.com/Challenge-Fiap-1TDSPX-2025/front-challenge](https://github.com/Challenge-Fiap-1TDSPX-2025/front-challenge)
+=======
+# Front-GS
+>>>>>>> 87e901af6a251d53e098ac964309245759bc0005
