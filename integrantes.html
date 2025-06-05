@@ -14,8 +14,8 @@
     <header class="cabecalho">
         <div class="conteiner">
             <div class="logo">
-                <img src="img/logo-challenge.png" id="logo-header">
-                <a href="index.html"><span>HealthSupport</span></a>
+                <img src="img/location_pin_icon-2.png" id="logo-header">
+                <a href="index.html"><span>MapTags</span></a>
             </div>
 
             <!-- Botão do menu mobile -->
@@ -163,9 +163,9 @@
                 <div class="links-rodape">
                     <h3>Produto</h3>
                     <ul>
-                        <li><a href="dashbord.html">Gerenciador de Tickets</a></li>
+                        <li><a href="dashbord.html">Gerenciador de Eventos</a></li>
                      
-                        <li><a href="index.html">Preços</a></li>
+                        <li><a href="mapa.html">Mapa</a></li>
                     </ul>
                 </div>
 
@@ -196,19 +196,7 @@
             </div>
         </div>
     </footer>
-    <script>
-        window.watsonAssistantChatOptions = {
-            integrationID: "e57a72ce-b438-4d7e-9472-7c7fca891ba5", // The ID of this integration.
-            region: "au-syd", // The region your integration is hosted in.
-            serviceInstanceID: "7ee18392-1afe-44ee-b5e3-c8f8241674e1", // The ID of your service instance.
-            onLoad: async (instance) => { await instance.render(); }
-        };
-        setTimeout(function () {
-            const t = document.createElement('script');
-            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
-            document.head.appendChild(t);
-        });
-    </script>
+    
 
 </body>
 
