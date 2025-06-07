@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const botaoFecharPainel = document.getElementById("fechar-painel")
   const conteudoPrincipal = document.querySelector(".conteudo-principal")
   const tabs = document.querySelectorAll(".tab")
-  const container = document.querySelector(".lista-tickets")
+  const container = document.querySelector(".lista-eventos")
   const filtroCategoria = document.getElementById("filtro-categoria")
   const botaoLimparFiltro = document.getElementById("limpar-filtro")
 
@@ -351,7 +351,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (botaoConfirmarExcluir) {
     botaoConfirmarExcluir.addEventListener("click", () => {
-      alert("Ticket excluído com sucesso!")
+      alert("Evento excluído com sucesso!")
       fecharModal()
       fecharPainelDetalhes()
     })
@@ -415,7 +415,7 @@ document.addEventListener("DOMContentLoaded", () => {
     botaoEncaminharTicket.addEventListener("click", () => {
       const departamento = document.getElementById("encaminhar-para")?.value
       if (departamento) {
-        alert("Ticket encaminhado com sucesso!")
+        alert("Evento encaminhado com sucesso!")
         const textarea = areaEncaminhar?.querySelector("textarea")
         if (textarea) textarea.value = ""
         const select = document.getElementById("encaminhar-para")

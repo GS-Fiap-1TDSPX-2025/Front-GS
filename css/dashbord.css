@@ -335,7 +335,7 @@ body {
 }
 
 /* Lista de Tickets */
-.lista-tickets {
+.lista-eventos {
     display: flex;
     flex-direction: column;
     gap: 15px;
