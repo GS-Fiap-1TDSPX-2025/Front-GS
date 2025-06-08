@@ -66,4 +66,3 @@ mapa.html
 ## 🔗 Repositório no GitHub
 
 [https://github.com/GS-Fiap-1TDSPX-2025/Front-GS]
-[https://github.com/GS-Fiap-1TDSPX-2025/Front-GS]
