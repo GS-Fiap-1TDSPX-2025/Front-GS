@@ -7,14 +7,14 @@
 }
 
 :root {
-    --cor-primaria: #4f46e5;
+    --cor-primaria: #4E342E;
     --cor-primaria-escura: #4f46e5;
     --cor-primaria-clara: #9e77e0;
-    --cor-fundo-escuro: #add2f7;
-    --cor-fundo-escuro-secundario: #4f46e5;
+    --cor-fundo-escuro: #182432;
+    --cor-fundo-escuro-secundario: #4E342E;
     --cor-texto-escuro: #222325;
-    --cor-texto-claro: #f9f9fb;
-    --cor-texto-secundario: #222325;
+    --cor-texto-claro: #faf3e0;
+    --cor-texto-secundario: #faf3e0;
     --cor-borda: #3a3352;
     --cor-fundo-claro: #f9f9fb;
     --cor-fundo-componente: #ffffff;
@@ -35,21 +35,22 @@ body {
 
 
 .btn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .btn.confirmar {
-  background-color: #e74c3c;
-  color: white;
+    background-color: #e74c3c;
+    color: white;
 }
 
 .btn.cancelar {
-  background-color: #bdc3c7;
-  color: #333;
+    background-color: #bdc3c7;
+    color: #333;
 }
+
 .app-container {
     display: flex;
     height: 100vh;
@@ -71,8 +72,8 @@ body {
 
 .logo {
     padding: 20px;
-    border-bottom: 1px solid var(--cor-borda);
-    color: #4338ca;
+    border-bottom: 1px solid var(--cor-fundo-claro);
+    color: #faf3e0;
 }
 
 /* Perfil do Usuário no Sidebar */
@@ -80,13 +81,13 @@ body {
     padding: 20px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid var(--cor-borda);
+    border-bottom: 1px solid var(--cor-fundo-claro);
 }
 
 .avatar-container {
     width: 40px;
     height: 40px;
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-fundo-claro);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -102,7 +103,7 @@ body {
     align-items: center;
 }
 
-.avatar-icon > img {
+.avatar-icon>img {
     width: 100%;
 }
 
@@ -113,7 +114,7 @@ body {
 .nome-usuario {
     font-size: 16px;
     font-weight: 500;
-    color: var(--cor-texto-escuro);
+    color: var(--cor-texto-claro);
     margin-bottom: 2px;
 }
 
@@ -138,11 +139,12 @@ body {
     cursor: pointer;
     color: var(--cor-texto-secundario);
     transition: background-color 0.2s;
+
 }
 
 .menu-item:hover {
-    background-color: var(--cor-fundo-escuro-secundario);
-    color: var(--cor-texto-escuro);
+    background-color: var(--cor-texto-secundario);
+    color: var(--cor-primaria);
 }
 
 .menu-item.ativo {
@@ -157,36 +159,54 @@ body {
     text-align: center;
 }
 
-.tickets-icon{
-    align-items: center;
+.aviso-icon {
     display: flex;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     justify-content: center;
+    align-items: center;
 }
 
-.tickets-icon > img{
-    width: 100%;
+.aviso-icon>img {
+    width: 60%;
+    height: 60%;
 }
 
-.users-icon{
+.users-icon {
     display: flex;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
 }
 
-.users-icon > img{
-    width: 100%;
+.users-icon>img {
+    width: 60%;
+    height: 60%;
 }
 
-.settings-icon{
+.settings-icon {
     display: flex;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
 }
 
-.settings-icon > img {
-    width: 100%;
+.settings-icon>img {
+    width: 60%;
 }
 
 /* Botão de Sair */
 .botao-sair-container {
     padding: 20px;
-    border-top: 1px solid var(--cor-borda);
+    border-top: 1px solid var(--cor-fundo-claro);
     text-decoration: none;
 }
 
@@ -205,7 +225,8 @@ body {
 }
 
 .botao-sair:hover {
-    background-color: var(--cor-primaria);
+    background-color: #724d44;
+    border-color: #724d44;
 }
 
 .icone-sair {
@@ -243,7 +264,7 @@ body {
 }
 
 .botao-novo {
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-fundo-escuro-secundario);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -253,7 +274,9 @@ body {
 }
 
 .botao-novo:hover {
-    background-color: var(--cor-primaria-escura);
+    background-color: #724d44;
+    border-color: #724d44;
+    ;
 }
 
 /* Filtros */
@@ -302,8 +325,8 @@ body {
 }
 
 .tab.ativo {
-    color: var(--cor-primaria);
-    border-bottom: 2px solid var(--cor-primaria);
+    color: var(--cor-fundo-escuro-secundario);
+    border-bottom: 2px solid var(--cor-fundo-escuro-secundario);
 }
 
 .tab:hover {
@@ -322,16 +345,16 @@ body {
     background-color: var(--cor-todos-tickets);
 }
 
-.indicador.abertos {
-    background-color: var(--cor-abertos);
+.indicador.tempestade {
+    background-color: #3b82f6;
 }
 
-.indicador.andamento {
-    background-color: var(--cor-em-andamento);
+.indicador.enchente{
+    background-color: #0ea5e9;
 }
 
-.indicador.resolvidos {
-    background-color: var(--cor-resolvidos);
+.indicador.terremoto{
+    background-color: #8b5cf6;
 }
 
 /* Lista de Tickets */
@@ -365,10 +388,10 @@ body {
 
 .ticket-info {
     display: flex;
-   
+
     align-items: center;
-    gap:24px;
-    
+    gap: 24px;
+
 }
 
 .ticket-id {
@@ -405,7 +428,7 @@ body {
 
 .botao-abrir {
     background-color: transparent;
-    color: var(--cor-primaria);
+    color: var(--cor-fundo-escuro-secundario);
     border: none;
     padding: 8px 15px;
     cursor: pointer;
@@ -439,7 +462,7 @@ body {
     justify-content: flex-end;
 }
 
-.botoes-propriedades{
+.botoes-propriedades {
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -459,7 +482,7 @@ body {
 }
 
 .botao-excluir {
-   
+
     background-color: rgb(241, 58, 58);
     color: white;
     border: none;
@@ -474,9 +497,9 @@ body {
     gap: 0.5rem;
 }
 
-#lixeira{
-  
-    width:10%;
+#lixeira {
+
+    width: 10%;
 }
 
 
@@ -485,7 +508,10 @@ body {
 .botao-salvar-anotacao:hover,
 .botao-encaminhar:hover,
 .botao-atualizar:hover {
-    background-color: var(--cor-primaria-escura);
+    background-color: #724d44;
+    border-color: #724d44;
+    
+
 }
 
 .botao-cancelar,
@@ -553,6 +579,7 @@ body {
 
 .ticket-info-detalhada {
     margin-bottom: 25px;
+
 }
 
 .ticket-info-detalhada h3 {
@@ -564,6 +591,7 @@ body {
 .ticket-meta {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     margin-bottom: 10px;
     font-size: 14px;
     color: #666;
@@ -571,8 +599,9 @@ body {
 
 .ticket-status {
     display: flex;
-    align-items: center;
+    justify-content: start;
     margin-bottom: 15px;
+    align-items: center;
 }
 
 .acoes-ticket,
@@ -613,12 +642,12 @@ body {
 }
 
 .acao-btn.responder {
-    color: var(--cor-primaria);
-    border-color: var(--cor-primaria);
+    color: var(--cor-fundo-escuro-secundario);
+    border-color: var(--cor-fundo-escuro-secundario);
 }
 
 .acao-btn.responder:hover {
-    background-color: #f8f0ff;
+    background-color: #f3c6aa;
 }
 
 .propriedade {
@@ -796,7 +825,7 @@ body {
     .menu-lateral {
         width: 100%;
         height: auto;
-        max-height: 200px;
+        max-height: 400px;
         overflow-y: auto;
     }
 
@@ -861,7 +890,7 @@ body {
         gap: 5px;
     }
 
-   
+
 
 
 }

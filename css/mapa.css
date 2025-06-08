@@ -13,7 +13,7 @@
 .mapa-titulo h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #333;
+  color: #4E342E;
   margin-bottom: 10px;
 }
 
@@ -79,7 +79,7 @@
 
 #endereco-input:focus {
   outline: none;
-  border-color: #4f46e5;
+  border-color: #4E342E;
   box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1);
 }
 
@@ -116,6 +116,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 12px;
+  color: #4E342E;
 }
 
 .legend-marker {
@@ -173,20 +174,21 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  background-color: #4f46e5;
+  background-color: #4E342E;
   color: white;
   padding: 15px 20px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(79, 70, 229, 0.25);
+  box-shadow: 0 4px 6px #4E342E;
 }
 
 .dashboard-link:hover {
-  background-color: #4338ca;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 10px rgba(79, 70, 229, 0.3);
+  background-color: #724d44;
+  border-color: #724d44;
+  transform: transzlateY(-2px);
+  box-shadow: 0 6px 10px #724d44;
 }
 
 .dashboard-icon {

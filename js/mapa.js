@@ -123,7 +123,7 @@ function abrirFormulario(pos, endereco = null) {
           Cancelar
         </button>
         <button onclick="window.adicionarEvento(${pos.lat()}, ${pos.lng()}, '${endereco ? endereco.replace(/'/g, "\\'") : ""}')"
-                style="padding: 8px 16px; background-color: #4f46e5; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 500;">
+                style="padding: 8px 16px; background-color: #4e342e; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 500;">
           Adicionar
         </button>
       </div>

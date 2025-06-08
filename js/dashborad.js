@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
       '<div class="ticket-acoes">' +
       '<button class="botao-abrir" data-ticket="' +
       evento.id +
-      '">Abrir Ticket</button>' +
+      '">Abrir Reporte</button>' +
       "</div>"
 
     container.appendChild(ticketDiv)
@@ -309,7 +309,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       alert(
-        `Ticket atualizado com sucesso!\nStatus: ${statusTexto[status]}\nAgente: ${agenteTexto[agente] || "Não atribuído"}`,
+        `Ticket atualizado com sucesso!\nStatus: ${statusTexto[status]}`,
       )
     })
   }
@@ -422,7 +422,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (select) select.selectedIndex = 0
         if (areaEncaminhar) areaEncaminhar.style.display = "none"
       } else {
-        alert("Por favor, selecione um departamento para encaminhar o ticket.")
+        alert("Por favor, selecione um departamento para encaminhar o evento.")
       }
     })
   }

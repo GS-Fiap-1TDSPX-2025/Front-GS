@@ -30,12 +30,7 @@
 
             <nav class="menu-navegacao">
                 <ul>
-                    <!--
-                   <li class="menu-item ativo">
-                        <span class="icone dashboard-icon">⊞</span>
-                        <span>Dashboard</span>
-                    </li>
-                    -->
+                    
 
                     <li class="menu-item">
                         <span class="icone users-icon"><img src="img/group.png"
@@ -43,7 +38,7 @@
                         <span>Usuários</span>
                     </li>
                     <li class="menu-item">
-                        <span class="icone tickets-icon"><img src="img/ticket.png"
+                        <span class="icone aviso-icon"><img src="img/warning.png"
                                 alt="imagem de tickets superexpostos"></span>
                         <span>Eventos</span>
                     </li>
@@ -86,10 +81,11 @@
 
                     <div class="filtro">
                         <select id="tipo-problema">
-                            <option value="">Tipo do problema</option>
-                            <option value="login">Login</option>
-                            <option value="pagamento">Pagamento</option>
-                            <option value="deposito">Depósito</option>
+                            <option value="">Tempestade</option>
+                            <option value="enchente">enchente</option>
+                            <option value="terremoto">terremoto</option>
+                            <option value="furacao">furacao</option>
+                            <option value="incendio">incendio</option>
                         </select>
                     </div>
 
@@ -105,17 +101,18 @@
                         Todos os Eventos
                     </button>
                     <button class="tab" data-categoria="Tempestade">
-                        <span class="indicador chuva"></span>
+                        <span class="indicador tempestade"></span>
                         Tempestade
                     </button>
                     <button class="tab" data-categoria="Enchente">
-                        <span class="indicador temperatura"></span>
+                        <span class="indicador enchente"></span>
                         Enchente
                     </button>
-                    <button class="tab" data-categoria="seca">
-                        <span class="indicador seca"></span>
-                        Seca
+                    <button class="tab" data-categoria="Terremoto">
+                        <span class="indicador terremoto"></span>
+                        Terremoto
                     </button>
+                    
                 </div>
 
             </header>
@@ -167,16 +164,7 @@
                             <option value="resolvido">Resolvido</option>
                         </select>
                     </div>
-                    <div class="propriedade">
-                        <label for="agente-responsavel">Agente Responsável</label>
-                        <select id="agente-responsavel">
-                            <option value="">Selecione um agente</option>
-                            <option value="carlos-silva">Carlos Silva</option>
-                            <option value="ana-santos">Ana Santos</option>
-                            <option value="pedro-oliveira">Pedro Oliveira</option>
-                            <option value="maria-costa">Maria Costa</option>
-                        </select>
-                    </div>
+                    
                     <div class="botoes-propriedades">
                         <button class="botao-atualizar">Atualizar</button>
                         <button class="botao-excluir">
@@ -186,7 +174,7 @@
                     </div>
                 </div>
 
-                <!-- Outras áreas como Resposta, Anotação, Encaminhar -->
+           
                 <div class="area-resposta-painel" style="display: none;">
                     <h4>Responder ao Evento</h4>
                     <textarea placeholder="Digite sua resposta aqui..."></textarea>
