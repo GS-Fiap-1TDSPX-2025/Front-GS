@@ -480,6 +480,10 @@
      gap: 16px;
  }
 
+ .info-autor{
+    height: 80px;
+ }
+
  .avatar-autor {
      width: 40px;
      height: 40px;
