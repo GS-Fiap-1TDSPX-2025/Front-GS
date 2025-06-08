@@ -75,8 +75,8 @@
      border: 2px solid #e5e7eb;
  }
 
- .botao-hero{
-    width: 200px;
+ .botao-hero {
+     width: 200px;
  }
 
  /* Cabeçalho */
@@ -436,7 +436,7 @@
      font-size: 1.25rem;
      font-weight: 600;
      margin-bottom: 12px;
-     color:#4E342E ;
+     color: #4E342E;
  }
 
  .cartao-beneficio p {
@@ -458,7 +458,7 @@
  }
 
  .cartao-depoimento {
-    background-color: white;
+     background-color: white;
      border: 1px solid #e5e7eb;
      border-radius: 8px;
      padding: 24px;
@@ -480,8 +480,8 @@
      gap: 16px;
  }
 
- .info-autor{
-    height: 80px;
+ .info-autor {
+     height: 80px;
  }
 
  .avatar-autor {
@@ -533,7 +533,7 @@
  .cartao-preco.popular {
      border-color: #4E342E;
      box-shadow: 0 4px 12px #FAF3E0;
-;
+     ;
  }
 
  .distintivo-popular {
@@ -591,7 +591,7 @@
      margin-bottom: 12px;
  }
 
- 
+
 
  /* Rodapé */
  .rodape {
