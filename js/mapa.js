@@ -94,7 +94,8 @@ function abrirFormulario(pos, endereco = null) {
   if (popup) popup.close()
 
   const conteudoForm = `
-    <div style="font-family: 'Inter', sans-serif; min-width: 280px;">
+    <div style="font-family: 'Inter', sans-serif; min-width: 260px; max-width: 90vw; ">
+
       <h3 style="margin-top: 0; color: #333; font-size: 16px;">Registrar Evento Climático</h3>
       
       <label style="display: block; margin-bottom: 5px; font-weight: 500; color: #333;">
@@ -133,6 +134,7 @@ function abrirFormulario(pos, endereco = null) {
   popup = new google.maps.InfoWindow({
     content: conteudoForm,
     position: pos,
+
   })
 
   popup.open(mapa)
