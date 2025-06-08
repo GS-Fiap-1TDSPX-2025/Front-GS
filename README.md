@@ -21,11 +21,11 @@ O sistema promove a interação entre a sociedade e as instituições públicas,
 ├── dashbord.css
 ├── faq.css
 ├── integrantes.css
-└── mapa.css
+├── mapa.css
 └── styles.css
 
 /img
-(imagens utilizadas no projeto)
+└── (imagens utilizadas no projeto)
 
 /js
 ├── contato.js
